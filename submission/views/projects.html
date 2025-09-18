@@ -74,16 +74,13 @@
   </div>
 
   <script>
-    // JavaScript for Accordion Functionality
     document.querySelectorAll('.accordion-header').forEach(button => {
       button.addEventListener('click', () => {
         const content = button.nextElementSibling;
         const isOpen = content.style.display === 'block';
 
-        // Close all accordion contents
         document.querySelectorAll('.accordion-content').forEach(content => content.style.display = 'none');
 
-        // Toggle the clicked accordion
         content.style.display = isOpen ? 'none' : 'block';
       });
     });
