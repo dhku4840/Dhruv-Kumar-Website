@@ -1,56 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhruv's Website</title>
-  <link rel="stylesheet" href="../resources/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv's Resume</title>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <style>
+        .resume-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-section {
+            margin-bottom: 25px;
+        }
+
+        .resume-section h2 {
+            color: #333;
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3, .education-item h3 {
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .download-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-button a:hover {
+            background: #444;
+        }
+    </style>
 </head>
 <body>
+    <!-- ====== Navigation Bar ====== -->
+    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; font-size: 1.5em;">
+        <div class="logo">Resume</div>
+        <ul style="display: flex; gap: 20px;">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><img src="../resources/img/rocket-planet.svg" alt="Rocket Planet" style="width: 40px;"></li>
+        </ul>
+    </nav>
 
-  <!-- ====== Navigation Bar ====== -->
-  <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; font-size: 1.5em;">
-    <div class="logo">Dhruv Kumar</div>
-    <ul style="display: flex; gap: 20px;">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><img src="../resources/img/rocket-planet.svg" alt="Rocket Planet" style="width: 40px;"></li>
-    </ul>
-  </nav>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="resume-header">
+            <h1>Dhruv Kumar</h1>
+            <p>Aerospace Engineering Student</p>
+            <p>University of Colorado Boulder</p>
+            <p>dhruv.kumar@colorado.edu</p>
+        </div>
 
-  <!-- ====== Main Section ====== -->
-  <div class="container" style="display: flex; align-items: center; gap: 20px;">
+        <!-- Education Section -->
+        <div class="resume-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>University of Colorado Boulder</h3>
+                <div class="date">Expected Graduation: May 2027</div>
+                <p>Bachelor of Science in Aerospace Engineering</p>
+                <p>GPA: 4.0</p>
+            </div>
+        </div>
 
-    <!-- Left: Large Picture -->
-    <div class="large-image" style="flex: 1;">
-      <img src="../resources/img/resumewebsite.png" alt="Resume" style="width: 100%; border-radius: 10px;">
+        <!-- Experience Section -->
+        <div class="resume-section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <div class="date">September 2025 - Present</div>
+                <p>Aerospace Department, CU Boulder</p>
+                <ul>
+                    <li>Working on advanced propulsion systems</li>
+                    <li>Conducting experiments on rocket fuel efficiency</li>
+                    <li>Analyzing data using MATLAB and Python</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Engineering Intern</h3>
+                <div class="date">June 2025 - August 2025</div>
+                <p>Space Technologies Corp., Boulder, CO</p>
+                <ul>
+                    <li>Assisted in satellite systems design</li>
+                    <li>Developed testing procedures for components</li>
+                    <li>Collaborated with senior engineers on projects</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="resume-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <p>Python, MATLAB, C++, HTML/CSS</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Software</h3>
+                    <p>SolidWorks, AutoCAD</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Laboratory</h3>
+                    <p>Basketball, Data Analysis</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <p>Project Management, Technical Writing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Button -->
+        <div class="download-button">
+            <a href="../resources/img/Dhruv Kumar Resume September 2025 - Leeds Format.pdf" target="_blank" download="Dhruv_Kumar_Resume.pdf">
+                Download PDF Version
+            </a>
+        </div>
     </div>
 
-    <!-- Right: Information Box -->
-    <div class="info-box" style="flex: 1; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-      <h2>About Me</h2>
-      <p>
-        View my resume here or click below to download a copy.
-      </p>
-      <a href="../resources/img/Dhruv Kumar Resume September 2025 - Leeds Format.pdf" target="_blank" download="Dhruv_Kumar_Resume.pdf">
-        <button style="padding: 10px 20px; background: #222; color: white; border: none; border-radius: 5px; cursor: pointer;">Download PDF</button>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- ====== Footer ====== -->
-  <footer class="footer">
-    <p>© 2025 My Website</p>
-    <div class="icons">
-      <!-- Replace # with your links -->
-      <a href="https://x.com/rawbirds">🐦</a>
-      <a href="https://www.instagram.com/kingjames/?hl=en">📷</a>
-      <a href="resume.html">📘</a>
-      <a href="https://www.linkedin.com/in/dhruv-kumar-aerospace/">💻</a>
-    </div>
-  </footer>
-
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <p>© 2025 My Website</p>
+        <div class="icons">
+            <a href="https://x.com/rawbirds"><img src="../resources/img/twitter.svg" alt="Twitter" style="width: 24px;"></a>
+            <a href="https://www.instagram.com/kingjames/?hl=en"><img src="../resources/img/instagram.svg" alt="Instagram" style="width: 24px;"></a>
+            <a href="resume.html"><img src="../resources/img/resume.svg" alt="Resume" style="width: 24px;"></a>
+            <a href="https://www.linkedin.com/in/dhruv-kumar-aerospace/"><img src="../resources/img/linkedin.svg" alt="LinkedIn" style="width: 24px;"></a>
+        </div>
+    </footer>
 </body>
 </html>
